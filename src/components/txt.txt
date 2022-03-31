@@ -1,0 +1,1 @@
+aqui va ir el navbar y footer (aca se va a desarrollar todo lo q se repita para el proyecto)

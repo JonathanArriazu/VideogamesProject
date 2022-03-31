@@ -1,0 +1,25 @@
+{
+  "games": [
+    {
+      "name": "Fifa 21",
+      "img": "https://store-images.s-microsoft.com/image/apps.39277.14337801801575723.f3066a8d-7191-4629-ae1c-f809f53b33cd.73a8b941-68f3-42cf-b04f-4fa9a401e003?q=90&w=177&h=265",
+      "categoria": "Deporte",
+      "description": "FIFA 21 es la nueva entrega del simulador de fútbol de EA Sports, el juego deportivo más influyente del mundo. Disponible en Xbox One, PS4, Xbox Series S/X, PS5, PC y Switch, se trata de una versión más avanzada en lo jugable y con un nuevo apartado gráfico en las consolas más potentes. Como cada año, incluye plantillas actualizadas, licencias de miles de jugadores y clubs, y la posibilidad de disfrutar de competiciones oficiales a nivel internacional.",
+      "id": 1
+    },
+    {
+      "name": "Super Mega Baseball 3",
+      "description": "Con una simulación más profunda del juego, modos completos de juego en línea y fuera de línea (incluido el nuevo modo Franchise) y gráficos realmente enriquecidos, Super Mega Baseball representa una mejora a las versiones pasadas. Cuenta con un montón de contenidos nuevos como una interfaz de usuario mejorada, nuevos audios, nuevos contenidos de equipos y personajes, y estadios nuevos con varias condiciones de iluminación.",
+      "img": "https://store-images.s-microsoft.com/image/apps.6230.13728510900587088.c32ad4cb-c837-4a7f-ab8d-c3d9ca2cb384.a837a727-84fc-4acc-9b6a-7584c6c7e4bd?q=90&w=177&h=265",
+      "categoria": "Deporte",
+      "id": 2
+    },
+    {
+      "name": "WRC 5",
+      "description": "Encuentra todos los coches, todos los pilotos y todos los rallies oficiales del FIA World Rally Championship 2015 en EL simulador de carreras de referencia. Conducción realista en distintas superficies, daños dinámicos, sistema de día y noche, condiciones meteorológicas... ¡Experimenta todas las sensaciones de las carreras de rallies con WRC 5!",
+      "img": "https://store-images.s-microsoft.com/image/apps.32417.71976189706256821.b5edb6b2-ba3c-4c72-9ea1-be46142b6ebd.8583499d-682a-41b6-b915-8334e811570e?q=90&w=177&h=265",
+      "categoria": "Carreras",
+      "id": 3
+    }
+  ]
+}
