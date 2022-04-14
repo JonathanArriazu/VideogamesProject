@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.infoImage {
+  width: 400px;
+  min-height: 120px;
+  margin-right: 10px;
+  }
+
+body {
+  margin-top: 70px;
+  background-color: black;
+  font-family: "Rubik", sans-serif;
+}
+.container {
+  background-color: #303030;
+  border: solid 1px;
+  border-color: #27b424;
+}
