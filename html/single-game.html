@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../src/css/single-page.css" />
+        <link rel="stylesheet" href="../src/css/footer.css" />
+    <link rel="stylesheet" href="../src/css/navbar.css">
+  </head>
+  <body class="body">
+    <nav class="navbar navbar-expand-lg fixed-top" id="main-nav">
+        <section class="container-fluid">
+          <div class="nav-logo-container"></div>
+           <div class="hamburger-menu"></div>
+            <div class="collapse navbar-collapse justify-content-between items-navbar" id="navbarNav"></div>
+          </div>
+        </section>
+      </nav>
+    <main>
+      <div class="productpage">
+        <section class="container sproduct my-5 pt-5 gameContainer">
+        </section>
+      </div>
+<!--COMENTARIOS-->
+    <section>
+      <div class="container text-center">
+            <h3>Comentarios</h3>
+            <hr class="mt-0 mb-5" />
+          </div>
+      <div class="div-comments"></div>
+    </section>
+
+    <!--FORM COMENTARIO-->
+    <section class="form-comment">
+      <div class="card container formm">
+        <div class="row">
+          <div class="col-12">
+            <div class="comment-box ml-2">
+              <h5 class="mb-4 pb-4">Deja una reseña</h5>
+              <form class="card_group">
+            <div class="form-group">
+              <label class="mb-3 fw-bold text-light" for="exampleInputtext"
+                ><i class="bi bi-envelope me-2"></i>E-MAIL</label
+              >
+              <input
+                type="text"
+                class="form-control input_style text-light"
+                id="exampleInputtext"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+              />
+            </div>
+            <div class="form-group mt-3">
+              <label
+                class="mb-3 fw-bold text-light"
+                for="exampleFormControlTextarea1"
+                ><i class="bi bi-card-text me-2"></i>COMENTARIO</label
+              >
+              <textarea
+                class="form-control input_style text-light"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline-light fs-5 mt-4 mb-3">
+              Comentar
+            </button>
+          </form>
+                </div>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </main>
+    <footer>
+      <div class="container mt-5">
+        <div class="bgcontainer text-center text-lg-start text-white">
+          <div class="container p-4">
+            <div class="row my-4 d-flex justify-content-between ms-4 me-4">
+              <div class="col-lg-3 col-md-12 mb-4 mb-md-0">
+                <div class="footer-logo-container" id="logo-div"></div>
+              </div>
+              <div class="xbox-pass col-lg-3 col-md-6 mb-2 mb-md-0"></div>
+              <div
+                class="contact-and-socials col-lg-3 col-md-6 mb-4 mb-md-0"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footercopyrigh"></div>
+    </footer>
+    <script src="../src/bootstrap/bootstrap.bundle.js"></script>
+    <script type="module" src="../src/js/single-game.js"></script>
+  </body>
+</html>

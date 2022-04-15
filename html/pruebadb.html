@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/bootstrap/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/sweetalert2/dist/sweetalert2.min.css"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="row">
+      <label>crear juego</label>
+      <div class="row">
+        <button
+          type="button"
+          class="btn-nuevo-game"
+          data-bs-toggle="modal"
+          data-bs-target="#modalConfirmCreate"
+        >
+          nuevo
+        </button>
+      </div>
+    </div>
+
+    <table class="table table-primary table-hover" id="tablagame">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Descripcion</th>
+          <th scope="col">Imagen</th>
+          <th scope="col">Categoria</th>
+          <th scope="col" class="text-center">Operaciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div id="gamesListContainer"></div>
+    <script type="module" src="../src/ui/uijuego.js"></script>
+    <script src="../src/bootstrap/bootstrap.bundle.js"></script>
+    <script src="../node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+  </body>
+</html>

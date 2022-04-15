@@ -1,0 +1,81 @@
+:root {
+  --bs-green: #76b900;
+  --bs-teal: #86c000;
+  --btn-success: #86c000;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  font-size: 10px;
+  font-weight: bolder;
+  margin-bottom: 0;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: 0;
+}
+
+.btn1 {
+  display: inline-block;
+  margin: 0.5em 0 0 0;
+  background-color: #101114;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  text-decoration: none;
+  padding: 3px 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-size: 10px;
+  font-weight: bolder;
+}
+
+.btn1:hover {
+  background-color: #27b424;
+  color: black;
+  border: 2px solid black;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .carousel-caption p {
+    font-size: 14px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+  }
+
+  .btn1 {
+    margin: 0em 0 1rem 0;
+    padding: 2px 20px;
+    font-size: 25px;
+    font-weight: bolder;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-caption h5 {
+    font-size: 40px;
+  }
+  .carousel-caption p {
+    font-size: 25px;
+  }
+}
+/* 
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+ */
