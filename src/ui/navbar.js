@@ -87,14 +87,25 @@ export function creationOfNavbar() {
 
   localStorage.setItem(
     "loggedUser",
-    JSON.stringify({ name: "Jonathan", lastname: "Arriazu" })
+    JSON.stringify({ name: "Jonathan", lastname: "Arriazu", admin: true })
   );
+
+  async function getUser() {
+    try {
+      const response = await fetch("http://localhost:4000/games");
+      const data = await response.json();
+      console.log(data)
+   } catch (error) {
+     console.log(error);
+   }
+  }
+  getUser();
 
   document.addEventListener("DOMContentLoaded", createHeader());
 
   function createHeader() {
     const loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
-    if (loggedUser) {
+    if (loggedUser.admin === true) {
       parent.removeChild(child);
       parent.removeChild(child2);
       //userContainer.textContent = `Bienvenido ${loggedUser.name}`;
@@ -105,12 +116,30 @@ export function creationOfNavbar() {
     Bienvenido ${loggedUser.name}
     </p>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="#">Perfil</a></li>
+    <li><a class="dropdown-item" href="../html/pruebadb.html">Panel de administrador</a></li>
+    <li><a class="dropdown-item" href="#">Perfil de usuario</a></li>
     <li><a class="dropdown-item" href="#">Logout</a></li>
     </ul>
     `;
       userContainer.append(userMenu);
-    } else {
+    } else if (loggedUser.admin === false) {
+      parent.removeChild(child);
+      parent.removeChild(child2);
+      //userContainer.textContent = `Bienvenido ${loggedUser.name}`;
+      const userMenu = document.createElement("div");
+      userMenu.classList.add("dropdown");
+      userMenu.innerHTML = `
+    <p class="dropdown-toggle logged-user" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+    Bienvenido ${loggedUser.name}
+    </p>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Perfil de usuario</a></li>
+    <li><a class="dropdown-item" href="#">Logout</a></li>
+    </ul>
+    `;
+      userContainer.append(userMenu);
+    }
+    else {
       parent.appendChil(removed);
       parent.appendChil(removed2);
     }

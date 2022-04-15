@@ -20,7 +20,6 @@ export function creationOfFooter() {
     .then((resp) => resp.json())
     .then((json) => {
       json.map((data) => {
-        console.log(data.img);
         divLogo.append(logo_fun(data.img));
       });
     });

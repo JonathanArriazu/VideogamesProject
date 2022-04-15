@@ -1,4 +1,12 @@
 {
+  "user": [
+    {
+      "name": "Jonathan",
+      "lastname": "Arriazu",
+      "admin": true
+    }
+  ],
+  
   "games": [
     {
       "name": "FIFA 21",
