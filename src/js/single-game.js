@@ -92,8 +92,7 @@ if (gameId) {
 }
 
 // Comments Validation
-import creationOfFooter from "./ui/footer.js";
+import creationOfFooter from "../ui/footer.js";
 creationOfFooter();
-
 import creationOfNavbar from "../ui/navbar.js";
 creationOfNavbar();
