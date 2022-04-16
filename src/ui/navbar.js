@@ -88,17 +88,10 @@ export function creationOfNavbar() {
   const child = parent.getElementsByTagName("li")[3];
   const child2 = parent.getElementsByTagName("li")[2];
 
-<<<<<<< HEAD
-  // localStorage.setItem(
-  //   "loggedUser",
-  //   JSON.stringify({ name: "Jonathan", lastname: "Arriazu" })
-  // );
-=======
   localStorage.setItem(
     "loggedUser",
     JSON.stringify({ name: "Jonathan", lastname: "Arriazu", admin: true })
   );
->>>>>>> c365d8f6546edd5b61219d5465456fa6342cdc48
 
   async function getUser() {
     try {

@@ -25,9 +25,9 @@
 
     <main>
         <div class="container">
-            <form id="registerForm" method="POST" name="registration" class="form-control" onsubmit=" validateForm();">
-                <div>
-                    <h1>Crear Usuario</h1>
+            <form id="registerForm" method="POST" name="registration" class="form-control form-control-color d-flex justify-content-center" onsubmit=" validateForm();">
+                <div class="hola">
+                    <h1 class="text-center">Crear Usuario</h1>
                 <ul>
                     <li>
                         <label for="uName">Nombre</label>
@@ -46,7 +46,7 @@
                         <input type="password" name="Confirm Password" id="confirmPassword"  oninput="verifyPassword(this)" required>
                     </li>
                     <li>
-                        <button type="submit" id="submit">Crear</button>
+                        <button type="submit"  id="submit">Crear</button>
                          <a href="javascript:void(0);" onclick="showHide('logIn', 'registerForm')">Iniciar Sesion</a>
                     </li>
                 </ul>
