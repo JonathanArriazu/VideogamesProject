@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="../src/css/login.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../src/bootstrap/bootstrap.min.css" />
+ 
+  
+        <link rel="stylesheet" href="../src/css/footer.css" />
+    <link rel="stylesheet" href="../src/css/navbar.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top" id="main-nav">
+        <section class="container-fluid">
+          <div class="nav-logo-container"></div>
+           <div class="hamburger-menu"></div>
+            <div class="collapse navbar-collapse justify-content-between items-navbar" id="navbarNav"></div>
+          </div>
+        </section>
+      </nav>
+
+    <main>
+        <div class="container">
+            <form id="registerForm" method="POST" name="registration" class="form-control" onsubmit=" validateForm();">
+                <div>
+                    <h1>Crear Usuario</h1>
+                <ul>
+                    <li>
+                        <label for="uName">Nombre</label>
+                        <input type="text" name="Name" id="uName"  required>
+                    </li>
+                    <li>
+                        <label for="uEmail">Email</label>
+                        <input type="email" name="Email" id="uEmail"  oninput="emailExist(this)" required>
+                    </li>
+                    <li>
+                        <label for="uPassword">Password</label>
+                        <input type="password" name="Password" id="uPassword" pattern=".{0}|.{6,}" required>
+                    </li>
+                    <li>
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" name="Confirm Password" id="confirmPassword"  oninput="verifyPassword(this)" required>
+                    </li>
+                    <li>
+                        <button type="submit" id="submit">Crear</button>
+                         <a href="javascript:void(0);" onclick="showHide('logIn', 'registerForm')">Iniciar Sesion</a>
+                    </li>
+                </ul>
+                </div>
+            </form>
+            <form id="thankYou" class="form-control" style="display: none;">
+                <div style="text-align: center">
+                    <p>Usuario registrado <a href="signin.html" onclick="showHide('logIn', 'thankYou')">Iniciar sesión ahora</a></p>
+                </div>
+            </form>
+           
+        </div>
+    </main>
+    
+      <script src="../src/bootstrap/bootstrap.bundle.js"></script>
+    <script type="" src="../src/js/login.js"></script>
+
+</body>
+</html>

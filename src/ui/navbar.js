@@ -66,10 +66,13 @@ export function creationOfNavbar() {
   <a class="nav-link" href="#">Contacto</a>
 </li>
 <li class="nav-item login-class">
-  <a class="nav-link" href="#">Iniciar sesión</a>
+  <a class="nav-link" href="signin.html">Iniciar sesión</a>
+
 </li>
 <li class="nav-item register-class">
-  <a data-bs-toggle="modal" data-bs-target="#modal_sub" class="btn btn-primary sign-up-btn" href="">Registrarse</a>
+  
+   <a class="nav-link" href="login.html">Registrarse</a>
+
 </li>
 <li class="nav-item">
   <a class="nav-link user" href="#"></a>
@@ -85,10 +88,17 @@ export function creationOfNavbar() {
   const child = parent.getElementsByTagName("li")[3];
   const child2 = parent.getElementsByTagName("li")[2];
 
+<<<<<<< HEAD
+  // localStorage.setItem(
+  //   "loggedUser",
+  //   JSON.stringify({ name: "Jonathan", lastname: "Arriazu" })
+  // );
+=======
   localStorage.setItem(
     "loggedUser",
     JSON.stringify({ name: "Jonathan", lastname: "Arriazu", admin: true })
   );
+>>>>>>> c365d8f6546edd5b61219d5465456fa6342cdc48
 
   async function getUser() {
     try {
