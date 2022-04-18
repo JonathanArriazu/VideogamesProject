@@ -20,7 +20,6 @@ export function creationOfNavbar() {
     .then((resp) => resp.json())
     .then((json) => {
       json.map((data) => {
-        console.log(data.img);
         navLogo.append(logo_fun(data.img));
       });
     });
@@ -90,14 +89,13 @@ export function creationOfNavbar() {
 
   localStorage.setItem(
     "loggedUser",
-    JSON.stringify({ name: "Jonathan", lastname: "Arriazu", admin: true })
+    JSON.stringify({ name: "Paco", lastname: "Pepe", admin: true })
   );
 
   async function getUser() {
     try {
       const response = await fetch("http://localhost:4000/games");
       const data = await response.json();
-      console.log(data);
     } catch (error) {
       console.log(error);
     }
