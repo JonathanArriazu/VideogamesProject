@@ -3,6 +3,19 @@ const gameId = window.location.hash.slice(1);
 const gameContainer = document.querySelector(".gameContainer");
 const comments_API = "https://jsonplaceholder.typicode.com/comments";
 const commentsContainer = document.querySelector(".div-comments");
+const commentsForm = document.querySelector("#formulario");
+const commentText = document.querySelector("#comment");
+const userMail = document.querySelector("#user-email");
+const userComments = document.querySelector("#lista-comments");
+
+let userCommentsList = [];
+
+loadListener();
+
+function loadListener() {
+  commentsForm.addEventListener("submit", emailValidation);
+  commentsForm.addEventListener("submit", commentsValidation);
+}
 //INFO GAME
 
 async function getGamesInfo(gameId) {
@@ -84,6 +97,89 @@ function errorPage() {
   gameContainer.append(div);
 }
 
+function commentsValidation(e) {
+  if (commentText.value === "") {
+    const paragraph = document.createElement("p");
+    const errorMessage = "No se puede ingresar un comentario vacío";
+    paragraph.textContent = errorMessage;
+    paragraph.classList.add("comment-error");
+    commentsForm.append(paragraph);
+    setTimeout(() => {
+      paragraph.remove();
+    }, 4000);
+    return;
+  } else if (commentText.value.length > 140) {
+    const paragraph = document.createElement("p");
+    const errorMessage =
+      "No se puede ingresar un texto que supere los 140 caracteres";
+    paragraph.textContent = errorMessage;
+    paragraph.classList.add("comment-error");
+    commentsForm.append(paragraph);
+    setTimeout(() => {
+      paragraph.remove();
+    }, 4000);
+    return;
+  }
+  if (commentsForm.lastElementChild.classList.contains("comment-error")) {
+    commentsForm.removeChild(commentsForm.lastElementChild);
+  }
+  readCommets();
+  userCommentsHTML();
+  commentsForm.reset();
+}
+
+function emailValidation(e) {
+  if (userMail.value === "") {
+    const paragraph = document.createElement("p");
+    const errorMessage = "No se puede ingresar un email vacío";
+    paragraph.textContent = errorMessage;
+    paragraph.classList.add("comment-error");
+    commentsForm.append(paragraph);
+    setTimeout(() => {
+      paragraph.remove();
+    }, 4000);
+    return;
+  }
+  if (commentsForm.lastElementChild.classList.contains("comment-error")) {
+    commentsForm.removeChild(commentsForm.lastElementChild);
+  }
+  readCommets();
+  userCommentsHTML();
+  commentsForm.reset();
+}
+
+function readCommets() {
+  const comments = {
+    email: userMail.value,
+    text: commentText.value,
+    id: Date.now().toString(),
+  };
+  userCommentsList.push(comments);
+}
+
+function userCommentsHTML() {
+  emptyCommets();
+  userCommentsList.forEach((comment) => {
+    const commentContainer = document.createElement("div");
+    commentContainer.innerHTML = `
+    <p> ${comment.email}</p>
+    <p> ${comment.text}</p>
+    `;
+    storageSynchronize();
+    userComments.append(commentContainer);
+  });
+}
+
+function storageSynchronize() {
+  localStorage.setItem("comments", JSON.stringify(userCommentsList));
+}
+
+function emptyCommets() {
+  while (userComments.firstChild) {
+    userComments.removeChild(userComments.firstChild);
+  }
+}
+
 if (gameId) {
   getGamesInfo(gameId);
   getComments();
@@ -91,7 +187,6 @@ if (gameId) {
   errorPage();
 }
 
-// Comments Validation
 import creationOfFooter from "../ui/footer.js";
 creationOfFooter();
 import creationOfNavbar from "../ui/navbar.js";

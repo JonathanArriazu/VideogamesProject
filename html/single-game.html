@@ -31,6 +31,7 @@
             <hr class="mt-0 mb-5" />
           </div>
       <div class="div-comments"></div>
+      <div id="lista-comments"></div>
     </section>
 
     <!--FORM COMENTARIO-->
@@ -40,15 +41,15 @@
           <div class="col-12">
             <div class="comment-box ml-2">
               <h5 class="mb-4 pb-4">Deja una reseña</h5>
-              <form class="card_group">
+              <form class="card_group" id="formulario">
             <div class="form-group">
-              <label class="mb-3 fw-bold text-light" for="exampleInputtext"
+              <label class="mb-3 fw-bold text-light" for="user-email"
                 ><i class="bi bi-envelope me-2"></i>E-MAIL</label
               >
               <input
                 type="text"
                 class="form-control input_style text-light"
-                id="exampleInputtext"
+                id="user-email"
                 aria-describedby="emailHelp"
                 placeholder="Enter email"
               />
@@ -56,12 +57,12 @@
             <div class="form-group mt-3">
               <label
                 class="mb-3 fw-bold text-light"
-                for="exampleFormControlTextarea1"
+                for="comment"
                 ><i class="bi bi-card-text me-2"></i>COMENTARIO</label
               >
               <textarea
                 class="form-control input_style text-light"
-                id="exampleFormControlTextarea1"
+                id="comment"
                 rows="3"
               ></textarea>
             </div>
