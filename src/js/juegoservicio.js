@@ -18,20 +18,19 @@ class juegoservicio {
      <tbody>
        <tr>
      
-         <td class="align-middle" style="background-color: #2c2d2f ; --bs-table-hover-bg: #3d3f42; --bs-table-hover-color: white;">${game.name}</td>
-         <td class="align-middle" style="background-color: #2c2d2f ; --bs-table-hover-bg: #3d3f42; --bs-table-hover-color: white;">${game.description}</td>
-         <td class="align-middle" style="background-color: #2c2d2f ; --bs-table-hover-bg: #3d3f42; --bs-table-hover-color: white;">
+         <td>${game.name}</td>
+         <td>${game.description}</td>
+         <td>
          <img src="${game.img}">
          </td>
-         <td class="align-middle" style="background-color: #2c2d2f ; --bs-table-hover-bg: #3d3f42; --bs-table-hover-color: white;">${game.category}</td>
-         <td class="align-middle" style="background-color: #2c2d2f ; --bs-table-hover-bg: #3d3f42; --bs-table-hover-color: white;">
+         <td>${game.category}</td>
+         <td>
          <div id="${game.id}">
-      <div class="d-flex"> 
      <button type="button" class="btnDeleteGame">X</button>
      <button type="button" class="btnEditGame" data-bs-toggle="modal" data-bs-target="#modalConfirmCreate">Editar</button>         </td>
      </div>
          </td>
-
+         <td>
        </tr>
        
      </tbody>
