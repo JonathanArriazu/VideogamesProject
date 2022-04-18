@@ -88,11 +88,11 @@ export function creationOfNavbar() {
   const child = parent.getElementsByTagName("li")[3];
   const child2 = parent.getElementsByTagName("li")[2];
 
-  localStorage.setItem(
+  /*   localStorage.setItem(
     "loggedUser",
     JSON.stringify({ name: "Jonathan", lastname: "Arriazu", admin: true })
   );
-
+ */
   async function getUser() {
     try {
       const response = await fetch("http://localhost:4000/games");

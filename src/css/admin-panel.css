@@ -1,0 +1,59 @@
+h1,
+td,
+th {
+  color: white;
+}
+
+.h1 {
+  font-weight: bold;
+}
+
+.btn-nuevo-game,
+.btn-index {
+  margin: 15px 50px 20px 0;
+}
+
+.btn-index {
+  height: 30px;
+}
+
+.btn-nuevo-game,
+.btnEditGame,
+.btnDeleteGame,
+.btn-index {
+  display: inline-block;
+  background-color: #27b424;
+  color: black;
+  text-transform: uppercase;
+  font-size: 13px;
+  border: none;
+  text-decoration: none;
+  padding: 3px 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-weight: bolder;
+}
+
+.btn-nuevo-game:hover,
+.btnEditGame:hover,
+.btnDeleteGame:hover,
+.btn-index:hover {
+  background-color: #31dd2e;
+  color: black;
+  border: 2px solid black;
+  text-decoration: none;
+}
+
+td,
+th {
+  color: white;
+}
+
+td:hover,
+th:hover {
+  background-color: red;
+}
+
+.table-primary:hover {
+  background-color: red;
+}

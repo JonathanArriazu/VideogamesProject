@@ -1,17 +1,15 @@
-const inputs = document.querySelectorAll(".form_register input");
-const btnFormRegister = document.querySelector(".form_register button");
 const myForm = document.getElementById("myForm");
-const nombre = document.querySelector(".grupo_nombre input");
-const usuario = document.querySelector(".grupo_usuario input");
-const correo = document.querySelector(".grupo_correo input");
-const password = document.querySelector(".grupo_password input");
+const nombre = document.querySelector(".userName input");
+const usuario = document.querySelector(".userUser input");
+const correo = document.querySelector(".userMail input");
+const password = document.querySelector(".userPassword input");
 
 myForm.addEventListener("submit", function (e) {
   e.preventDefault();
   if (nombre && usuario && correo && password) {
     createUser();
   } else {
-    console.log("No entra");
+    alert("Revise los datos ingresados antes de continuar");
   }
 });
 

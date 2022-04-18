@@ -5,33 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../src/bootstrap/bootstrap.min.css" />
-
+    <link rel="stylesheet" href="../src/css/admin-panel.css" />
 
     <title>Document</title>
   </head>
-  <body>
+  <body style="background-color: black">
     <div class="row">
-      <label>crear juego</label>
-      <div class="row">
+      <div class="d-flex justify-content-between">
+        <h1>Panel de Administrador</h1>
         <button
           type="button"
           class="btn-nuevo-game"
           data-bs-toggle="modal"
           data-bs-target="#modalConfirmCreate"
         >
-          nuevo
+          Agregar Nuevo Juego
         </button>
+        <a type="button" class="btn-index" href="index.html">
+          Volver a Inicio
+        </a>
       </div>
     </div>
 
     <table class="table table-primary table-hover" id="tablagame">
       <thead>
-        <tr>
-          <th scope="col">Nombre</th>
-          <th scope="col">Descripcion</th>
-          <th scope="col">Imagen</th>
-          <th scope="col">Categoria</th>
-          <th scope="col" class="text-center">Operaciones</th>
+        <tr style="background-color: #27b424">
+          <th
+            scope="col"
+            style="background-color: #2c2d2f; --bs-table-hover-bg: red"
+          >
+            Nombre
+          </th>
+          <th scope="col" style="background-color: #2c2d2f">Descripcion</th>
+          <th scope="col" style="background-color: #2c2d2f">Imagen</th>
+          <th scope="col" style="background-color: #2c2d2f">Categoria</th>
+          <th scope="col" style="background-color: #2c2d2f" class="text-center">
+            Operaciones
+          </th>
         </tr>
       </thead>
       <tbody></tbody>

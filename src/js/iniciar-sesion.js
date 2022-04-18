@@ -1,7 +1,7 @@
 //variables
-const usuarioLogin = document.querySelector(".grupo_usuarioLogin input");
-const passwordLogin = document.querySelector(".grupo_passwordLogin input");
-const formLogin = document.getElementById("formLogin");
+const usuarioLogin = document.querySelector(".loginUser input");
+const passwordLogin = document.querySelector(".loginPassword input");
+const formLogin = document.getElementById("loginForm");
 
 formLogin.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -23,10 +23,10 @@ const login = async (usuario, password) => {
 
     if (usuarios.length && usuarios[0].password === password) {
       if (usuarios[0].admin) {
-        console.log("Es admin");
+        //console.log("Es admin");
         window.location.href = "./pruebadb.html";
       } else {
-        console.log("No es admin");
+        //console.log("No es admin");
         window.location.href = "./index.html";
       }
     } else {

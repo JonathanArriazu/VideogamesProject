@@ -18,19 +18,20 @@ class juegoservicio {
      <tbody>
        <tr>
      
-         <td>${game.name}</td>
-         <td>${game.description}</td>
-         <td>
+         <td style="background-color: #2c2d2f ; --bs-table-hover-bg: #3d3f42; --bs-table-hover-color: white;">${game.name}</td>
+         <td style="background-color: #2c2d2f ; --bs-table-hover-bg: #3d3f42; --bs-table-hover-color: white;">${game.description}</td>
+         <td style="background-color: #2c2d2f ; --bs-table-hover-bg: #3d3f42; --bs-table-hover-color: white;">
          <img src="${game.img}">
          </td>
-         <td>${game.category}</td>
-         <td>
+         <td style="background-color: #2c2d2f ; --bs-table-hover-bg: #3d3f42; --bs-table-hover-color: white;">${game.category}</td>
+         <td style="background-color: #2c2d2f ; --bs-table-hover-bg: #3d3f42; --bs-table-hover-color: white;">
          <div id="${game.id}">
+      <div class="d-flex"> 
      <button type="button" class="btnDeleteGame">X</button>
      <button type="button" class="btnEditGame" data-bs-toggle="modal" data-bs-target="#modalConfirmCreate">Editar</button>         </td>
      </div>
          </td>
-         <td>
+
        </tr>
        
      </tbody>
@@ -56,10 +57,9 @@ class juegoservicio {
           img: game.img,
           category: game.category,
           id: game.id,
-          isDestacado:game.isDestacado,
-          shortdescription:game.shortdescription,
-          imgdest: game.imgdest
-        
+          isDestacado: game.isDestacado,
+          shortdescription: game.shortdescription,
+          imgdest: game.imgdest,
         }),
       });
     } catch (error) {
@@ -111,7 +111,7 @@ class juegoservicio {
           category: game.category,
           isDestacado: game.isDestacado,
           shortdescription: game.shortdescription,
-          imgdest:game.imgdest
+          imgdest: game.imgdest,
         }),
       });
     } catch (error) {
