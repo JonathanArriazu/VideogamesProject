@@ -27,7 +27,7 @@ async function buildModal() {
             </div>
             <div class="mb-3">
               <div>
-                <label>Descripcion Juego</label>
+                <label>Descripcion del Juego</label>
               </div>
               <textarea id="gameDescription" value="" class="form-control "  rows="3"></textarea>
               <div class="invalid-feedback">
@@ -36,11 +36,11 @@ async function buildModal() {
             </div> 
             <div class="mb-3">
               <div>
-                <label>Descripcion Juego destacado</label>
+                <label>Breve Descripcion para Juego destacado</label>
               </div>
               <textarea class="form-control" value="" id="gameDescriptionShort" maxlength="130" rows="3"></textarea>
               <div class="invalid-feedback">
-                Ingrese la descripción del juego
+                Ingrese la descripción del juego destacado
               </div>
             </div> 
             <div class="mb-3">
@@ -64,7 +64,7 @@ async function buildModal() {
             </div>
             <div class="mb-3">
               <div>
-                <label>Imagen Juego Destacado</label>
+                <label>Imagen para Juego Destacado</label>
               </div>
               <input type="text" value="" id="gameimgdest" style="width:270px;height:30px" class=""/>
               <div class="invalid-feedback">

@@ -20,13 +20,13 @@
   "games": [
     {
       "name": "FIFA 21",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Natus, iusto autem consectetur delectus voluptates facilis laboriosam eiusLorem ipsum dolor sit amet consectetur adipisicing elit.Natus, iusto autem consectetur delectus voluptates facilis laboriosam eius",
+      "description": "FIFA 21 es la nueva entrega del simulador de fútbol de EA Sports, el juego deportivo más influyente del mundo. Disponible en Xbox One, PS4, Xbox Series S/X, PS5, PC y Switch, se trata de una versión más avanzada en lo jugable y con un nuevo apartado gráfico en las consolas más potentes. Como cada año, incluye plantillas actualizadas, licencias de miles de jugadores y clubs, y la posibilidad de disfrutar de competiciones oficiales a nivel internacional.",
       "img": "https://store-images.s-microsoft.com/image/apps.39277.14337801801575723.f3066a8d-7191-4629-ae1c-f809f53b33cd.73a8b941-68f3-42cf-b04f-4fa9a401e003?q=90&w=177&h=265",
       "category": "Deporte",
-      "id": 1,
       "isDestacado": "false",
       "shortdescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Natus, iusto autem consectetur delectus voluptates facilis laboriosam eius",
-      "imgdest": "https://techgamebox.com/wp-content/uploads/2020/07/fifa-21-kylian-mbappe.jpg"
+      "imgdest": "https://techgamebox.com/wp-content/uploads/2020/07/fifa-21-kylian-mbappe.jpg",
+      "id": 1
     },
     {
       "name": "Super Mega Baseball 3",
