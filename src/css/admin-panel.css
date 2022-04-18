@@ -1,6 +1,8 @@
 h1,
+h5,
 td,
-th {
+th,
+label {
   color: white;
 }
 
@@ -49,11 +51,26 @@ th {
   color: white;
 }
 
-td:hover,
-th:hover {
-  background-color: red;
+.modal-header,
+.modal-body,
+.modal-footer {
+  background-color: #1f2022;
 }
 
-.table-primary:hover {
-  background-color: red;
+.btnsavegame {
+  background: #27b424;
+  color: black;
+  font-weight: bolder;
+  border-color: #27b424;
+}
+
+.btnsavegame:hover {
+  background: #2ed12b;
+  color: black;
+  font-weight: bolder;
+  border-color: #2ed12b;
+}
+
+.btnclosemodal {
+  font-weight: bolder;
 }

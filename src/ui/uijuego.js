@@ -65,7 +65,7 @@ async function buildModal() {
         </form>
         </div>         
         <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-secondary btnclosemodal" data-bs-dismiss="modal">Cerrar</button>
         <button type="submit" class="btn btn-primary btnsavegame">Guardar</button>     
         </div>
       </div>
@@ -97,10 +97,7 @@ async function buildModal() {
         imgdest: document.querySelector("#gameimgdest").value,
         category: document.getElementById("myselect").value,
         isDestacado: document.querySelector("#gamedescatado").value,
-      
       };
-
-
 
       if (e.target.classList.contains("btnsavegame")) {
         if (document.querySelector("#gameid").value) {
@@ -122,27 +119,27 @@ async function buildModal() {
   async function setgameedit(gameedit) {
     const gameNombre = document.querySelector("#gameNombre");
     const gameDescription = document.querySelector("#gameDescription");
-    const gameDescriptionShort = document.querySelector("#gameDescriptionShort");
+    const gameDescriptionShort = document.querySelector(
+      "#gameDescriptionShort"
+    );
 
     const gameimg = document.querySelector("#gameimg");
     const gamecategoria = document.querySelector("#myselect");
     const gameid = document.querySelector("#gameid");
-    const gamedest = document.querySelector("#gamedescatado")
-    const gameimgdest=document.querySelector("#gameimgdest");
+    const gamedest = document.querySelector("#gamedescatado");
+    const gameimgdest = document.querySelector("#gameimgdest");
 
     gameNombre.value = gameedit.name;
     gameDescription.value = gameedit.description;
     gameimg.value = gameedit.img;
     gamecategoria.value = gameedit.category;
-    gameimgdest.value =gameedit.imgdest;
-    gamedest.value =gameedit.isDestacado;
-    gameDescriptionShort.value =gameedit.shortdescription;
+    gameimgdest.value = gameedit.imgdest;
+    gamedest.value = gameedit.isDestacado;
+    gameDescriptionShort.value = gameedit.shortdescription;
     if (gameedit.id) {
       gameid.value = gameedit.id;
     } else {
       gameid.value = 0;
     }
   }
-
- 
 }
