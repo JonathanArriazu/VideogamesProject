@@ -1,0 +1,23 @@
+.card-body {
+  background-color: #1f2022;
+  border-radius: 1rem;
+}
+
+h3 {
+  color: white;
+}
+
+.inicio {
+  padding-top: 10px;
+  text-decoration: none;
+  color: #27b424;
+}
+
+.gradient-custom-4 {
+  /* fallback for old browsers */
+  background: #27b424;
+}
+
+.card {
+  border-radius: 1rem;
+}

@@ -6,23 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../src/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../src/css/iniciar-sesion.css">
+    <link rel="stylesheet" href="../src/css/footer.css" />
+    <link rel="stylesheet" href="../src/css/navbar.css">
   </head>
   <body>
-    <section class="vh-100" style="background-color: #508bfc">
+    <nav class="navbar navbar-expand-lg fixed-top" id="main-nav">
+        <section class="container-fluid">
+          <div class="nav-logo-container"></div>
+           <div class="hamburger-menu"></div>
+            <div class="collapse navbar-collapse justify-content-between items-navbar" id="navbarNav"></div>
+          </div>
+        </section>
+      </nav>
+    <section class="vh-100">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-            <div class="card shadow-2-strong" style="border-radius: 1rem">
+            <div class="card shadow-2-strong">
               <div class="card-body p-5 text-center">
-                <h3 class="mb-5">Sign in</h3>
+                <h3 class="mb-5">Iniciar Sesión</h3>
                 <form class="form_login" id="formLogin">
                   <div class="form-outline mb-4 grupo_usuarioLogin">
                     <input
                       type="text"
                       autocomplete="username"
-                      placeholder="Usuario"
+                      placeholder="Ingrese su usuario"
                       id="usuarioLogin"
-                      class="form-control form-control-lg"
+                      class="form-control form-control-lg text-center"
                     />
                   </div>
 
@@ -30,20 +41,21 @@
                     <input
                       type="password"
                       autocomplete="new-password"
-                      placeholder="Contraseña"
+                      placeholder="Ingrese su contraseña"
                       id="passwordLogin"
-                      class="form-control form-control-lg"
+                      class="form-control form-control-lg text-center"
                     />
                   </div>
 
-                  <div class="d-flex justify-content-center">
+                  <div class="d-flex justify-content-between iniciarSesionBtn">
                     <button
                       type="submit"
                       class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
                       id="btn_registrarse"
                     >
-                      Register
+                      Iniciar Sesion
                     </button>
+                    <a class="inicio" href="index.html">Volver a Inicio</a>
                   </div>
                 </form>
               </div>
@@ -52,7 +64,25 @@
         </div>
       </div>
     </section>
+    <footer>
+      <div class="container mt-5">
+        <div class="bgcontainer text-center text-lg-start text-white">
+          <div class="container p-4">
+            <div class="row my-4 d-flex justify-content-between ms-4 me-4">
+              <div class="col-lg-3 col-md-12 mb-4 mb-md-0">
+                <div class="footer-logo-container" id="logo-div"></div>
+              </div>
+              <div class="xbox-pass col-lg-3 col-md-6 mb-2 mb-md-0"></div>
+              <div
+                class="contact-and-socials col-lg-3 col-md-6 mb-4 mb-md-0"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footercopyrigh"></div>
+    </footer>
     <script src="../src/bootstrap/bootstrap.bundle.js"></script>
-    <script src="../src/js/iniciar-sesion.js"></script>
+    <script type="module" src="../src/js/iniciar-sesion.js"></script>
   </body>
 </html>

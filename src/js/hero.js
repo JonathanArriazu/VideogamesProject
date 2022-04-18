@@ -39,7 +39,7 @@ export function creationfOfHero() {
               <div class="carousel-caption">
                 <h5>${game.name}</h5>
                 <p>${game.shortdescription}</p>
-                <a href="404.html" class="btn1">Jugar</a>
+                <a href="index.html" class="btn1">Jugar</a>
 `;
     return div;
   }

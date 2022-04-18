@@ -36,3 +36,8 @@ const login = async (usuario, password) => {
     console.log(error);
   }
 };
+
+import creationOfFooter from "../ui/footer.js";
+creationOfFooter();
+import creationOfNavbar from "../ui/navbar.js";
+creationOfNavbar();

@@ -1,17 +1,17 @@
 {
   "usuario": [
     {
-      "nombre": "Paco Merla",
-      "usuario": "PacoMerla",
-      "correo": "joni.arriazu2@gmail.com",
+      "nombre": "Paco Pepe",
+      "usuario": "PacoPepe",
+      "correo": "asdasd@gmail.com",
       "password": "qweqwe",
       "admin": true,
       "id": 1
     },
     {
-      "nombre": "Arriazu Jonathan",
-      "usuario": "JoniArriazu",
-      "correo": "joni.arriazu2@gmail.com",
+      "nombre": "Jose Pepe",
+      "usuario": "JosePepe",
+      "correo": "asdasd@gmail.com",
       "password": "qweqwe",
       "admin": false,
       "id": 2

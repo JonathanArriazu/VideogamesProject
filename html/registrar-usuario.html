@@ -7,8 +7,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="../src/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="../src/css/register.css" />
+    <link rel="stylesheet" href="../src/css/footer.css" />
+    <link rel="stylesheet" href="../src/css/navbar.css" />
   </head>
   <body>
+        <nav class="navbar navbar-expand-lg fixed-top" id="main-nav">
+        <section class="container-fluid">
+          <div class="nav-logo-container"></div>
+           <div class="hamburger-menu"></div>
+            <div class="collapse navbar-collapse justify-content-between items-navbar" id="navbarNav"></div>
+          </div>
+        </section>
+      </nav>
     <section
       class="vh-100 bg-image"
       style="
@@ -23,85 +33,84 @@
             <div class="col-12 col-md-9 col-lg-7 col-xl-6">
               <div class="card" style="border-radius: 15px">
                 <div class="card-body p-5">
-                  <h2 class="text-uppercase text-center mb-5">
-                    Create an account
-                  </h2>
+                  <h2 class="text-uppercase text-center mb-5">Crear Cuenta</h2>
                   <!--FORM REGISTER-->
                   <form class="form_register" id="myForm">
                     <div class="form-outline mb-4 grupo_nombre">
-                      <input
-                        type="text"
-                        placeholder="Nombre Completo"
-                        name="nombre"
-                        class="form-control form-control-lg"
-                      />
                       <label
                         class="form-label form_input_error"
                         for="form3Example1cg"
-                        >Your Name</label
+                        >Nombre y Apellido</label
                       >
+                      <input
+                        type="text"
+                        placeholder="Ingrese su nombre completo"
+                        name="nombre"
+                        class="form-control form-control-lg"
+                      />
                     </div>
 
                     <div class="form-outline mb-4 grupo_usuario">
+                      <label class="form-label" for="form3Example3cg"
+                        >Nombre de Usuario</label
+                      >
                       <input
                         type="text"
                         autocomplete="username"
-                        placeholder="Nombre de Usuario"
+                        placeholder="Ingrese su nombre de usuario"
                         name="usuario"
                         class="form-control form-control-lg"
                       />
-                      <label class="form-label" for="form3Example3cg"
-                        >Your Nombre de usuario</label
-                      >
                     </div>
 
                     <div class="form-outline mb-4 grupo_correo">
-                      <input
-                        type="email"
-                        autocomplete="email"
-                        placeholder="Correo Electrónico"
-                        name="correo"
-                        class="form-control form-control-lg"
-                      />
                       <label class="form-label" for="form3Example4cg"
                         >E-mail</label
                       >
+                      <input
+                        type="email"
+                        autocomplete="email"
+                        placeholder="Ingrese su correo electrónico"
+                        name="correo"
+                        class="form-control form-control-lg"
+                      />
                     </div>
 
                     <div class="form-outline mb-4 grupo_password">
+                      <label class="form-label" for="form3Example4cg"
+                        >Contraseña</label
+                      >
                       <input
                         type="password"
                         autocomplete="new-password"
-                        placeholder="Contraseña"
+                        placeholder="Ingrese una contraseña"
                         name="password"
                         class="form-control form-control-lg"
                       />
-                      <label class="form-label" for="form3Example4cg"
-                        >Password</label
-                      >
                     </div>
 
                     <div class="form-outline mb-4 grupo_password2">
+                      <label class="form-label" for="form3Example4cg"
+                        >Repita Contraseña</label
+                      >
                       <input
                         type="password"
                         autocomplete="new-password"
-                        placeholder="Repetir Contraseña"
+                        placeholder="Repita la contraseña ingresada"
                         name="password2"
                         class="form-control form-control-lg"
                       />
-                      <label class="form-label" for="form3Example4cg"
-                        >Repetir Contraseña</label
-                      >
                     </div>
 
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-between">
                       <button
                         type="submit"
                         class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
                         id="btn_registrarse"
                       >
-                        Register
+                        Registrarse
                       </button>
+                      <a class="inicio" href="index.html">Volver a Inicio</a>
                     </div>
                   </form>
                 </div>
@@ -111,7 +120,25 @@
         </div>
       </div>
     </section>
+        <footer>
+      <div class="container mt-5">
+        <div class="bgcontainer text-center text-lg-start text-white">
+          <div class="container p-4">
+            <div class="row my-4 d-flex justify-content-between ms-4 me-4">
+              <div class="col-lg-3 col-md-12 mb-4 mb-md-0">
+                <div class="footer-logo-container" id="logo-div"></div>
+              </div>
+              <div class="xbox-pass col-lg-3 col-md-6 mb-2 mb-md-0"></div>
+              <div
+                class="contact-and-socials col-lg-3 col-md-6 mb-4 mb-md-0"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footercopyrigh"></div>
+    </footer>
     <script src="../src/bootstrap/bootstrap.bundle.js"></script>
-    <script src="../src/js/registrar-usuario.js"></script>
+    <script type="module" src="../src/js/registrar-usuario.js"></script>
   </body>
 </html>

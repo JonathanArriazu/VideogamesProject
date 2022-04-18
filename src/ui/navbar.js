@@ -66,12 +66,12 @@ export function creationOfNavbar() {
   <a class="nav-link" href="#">Contacto</a>
 </li>
 <li class="nav-item login-class">
-  <a class="nav-link" href="signin.html">Iniciar sesión</a>
+  <a class="nav-link" href="iniciar-sesion.html">Iniciar sesión</a>
 
 </li>
 <li class="nav-item register-class">
   
-   <a class="nav-link" href="login.html">Registrarse</a>
+   <a class="nav-link" href="registrar-usuario.html">Registrarse</a>
 
 </li>
 <li class="nav-item">
@@ -87,20 +87,20 @@ export function creationOfNavbar() {
     .getElementsByTagName("ul")[0];
   const child = parent.getElementsByTagName("li")[3];
   const child2 = parent.getElementsByTagName("li")[2];
-
+  /* 
   localStorage.setItem(
     "loggedUser",
     JSON.stringify({ name: "Jonathan", lastname: "Arriazu", admin: true })
   );
-
+ */
   async function getUser() {
     try {
       const response = await fetch("http://localhost:4000/games");
       const data = await response.json();
-      console.log(data)
-   } catch (error) {
-     console.log(error);
-   }
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
   }
   getUser();
 
@@ -141,8 +141,7 @@ export function creationOfNavbar() {
     </ul>
     `;
       userContainer.append(userMenu);
-    }
-    else {
+    } else {
       parent.appendChil(removed);
       parent.appendChil(removed2);
     }
