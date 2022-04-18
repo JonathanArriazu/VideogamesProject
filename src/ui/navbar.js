@@ -89,7 +89,7 @@ export function creationOfNavbar() {
 
   localStorage.setItem(
     "loggedUser",
-    JSON.stringify({ name: "Paco", lastname: "Pepe", admin: true })
+    JSON.stringify({ name: "Jose", lastname: "Pepe", admin: true })
   );
 
   async function getUser() {

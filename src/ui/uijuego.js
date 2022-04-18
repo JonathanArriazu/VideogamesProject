@@ -14,64 +14,88 @@ async function buildModal() {
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-        <form id="form-create">
-        <input type="text" id="gameid" style="display:none"/>
-          <div class="mb-3">
-          <div>
-          <label>Nombre Juego</label>
-          </div>
-          <input type="text" class="form-control" id="gameNombre" maxlength="10" required>
-          </div>
-        <div class="mb-3">
-        <div>
-        <label>Descripcion Juego</label>
-        </div>
-        <textarea class="form-control" id="gameDescription" rows="3"></textarea>
-        </div> 
-        <div class="mb-3">
-        <div>
-        <label>Descripcion Juego destacado</label>
-        </div>
-        <textarea class="form-control" id="gameDescriptionShort" maxlength="130" rows="3"></textarea>
-        </div> 
-        <div class="mb-3">
-            <label>Destacado?</label>
-            <select name="gamedest" id="gamedescatado">
+          <form id="form-create">
+            <input type="text" id="gameid" style="display:none"/>
+            <div class="mb-3">
+              <div>
+                <label>Nombre Juego</label>
+              </div>
+              <input type="text" class="form-control " id="gameNombre" maxlength="10" value="" required>
+              <div class="invalid-feedback">
+                Ingrese el nombre del juego
+              </div>
+            </div>
+            <div class="mb-3">
+              <div>
+                <label>Descripcion Juego</label>
+              </div>
+              <textarea id="gameDescription" value="" class="form-control "  rows="3"></textarea>
+              <div class="invalid-feedback">
+                Ingrese la descripción del juego
+              </div>
+            </div> 
+            <div class="mb-3">
+              <div>
+                <label>Descripcion Juego destacado</label>
+              </div>
+              <textarea class="form-control" value="" id="gameDescriptionShort" maxlength="130" rows="3"></textarea>
+              <div class="invalid-feedback">
+                Ingrese la descripción del juego
+              </div>
+            </div> 
+            <div class="mb-3">
+              <label>Destacado?</label>
+              <select name="gamedest" value="" id="gamedescatado" class="">
                 <option value='true'>Sí</option>
                 <option value='false'>No</option>
-            </select>
-        </div>
-        <div class="mb-3">
-            <div>
-             <label>Imagen Juego</label>
+              </select>
+              <div class="invalid-feedback">
+                Seleccione si el juego debería ser destacado o no
+              </div>
             </div>
-            <input type="text" id="gameimg" style="width:270px;height:30px"/>
-        </div>
-        <div class="mb-3">
-        <div>
-         <label>Imagen Juego Destacado</label>
-        </div>
-        <input type="text" id="gameimgdest" style="width:270px;height:30px"/>
-    </div>
-        <div class="mb-3">
-          <label>Elegir categoria</label>
-        <select class="form-select" id="myselect" aria-label="gamecategoria">
-          <option value="Deporte">Deporte</option>
-          <option value="Shooters">Shooters</option>
-          <option value="Aventura">Aventura</option>
-          <option value="Accion">Accion</option>
-        </select>
-        </div>
-        </form>
+            <div class="mb-3">
+              <div>
+                <label>Imagen Juego</label>
+              </div>
+              <input type="text" value="" id="gameimg" style="width:270px;height:30px" class=""/>
+              <div class="invalid-feedback">
+                Seleccione una imágen para el juego
+              </div>
+            </div>
+            <div class="mb-3">
+              <div>
+                <label>Imagen Juego Destacado</label>
+              </div>
+              <input type="text" value="" id="gameimgdest" style="width:270px;height:30px" class=""/>
+              <div class="invalid-feedback">
+              Seleccione una imágen para el juego destacado
+              </div>
+            </div>
+            <div class="mb-3">
+              <label>Elegir categoria</label>
+              <select class="form-select" id="myselect" aria-label="gamecategoria" class="">
+                <option value="Deporte">Deporte</option>
+                <option value="Shooters">Shooters</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Accion">Accion</option>
+              </select>
+              <div class="invalid-feedback">
+              Seleccione una categorías
+              </div>
+            </div>
+            <div id="error-alert" class="alert alert-danger" style="visibility: hidden;" role="alert">
+              Todos los campos son requeridos
+            </div>
+          </form>
         </div>         
         <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btnclosemodal" data-bs-dismiss="modal">Cerrar</button>
-        <button type="submit" class="btn btn-primary btnsavegame">Guardar</button>     
+          <button type="button" id="cerrarmodal" class="btn btn-secondary btnclose" data-bs-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-primary btnsavegame">Guardar</button>     
         </div>
       </div>
     </div>
-    </div>
-    `;
+  </div>
+  `;
 
   document.body.append(div);
 
@@ -99,11 +123,25 @@ async function buildModal() {
         isDestacado: document.querySelector("#gamedescatado").value,
       };
 
+      if (e.target.classList.contains("btnclose")) {
+        clearFields(game);
+      }
+
       if (e.target.classList.contains("btnsavegame")) {
-        if (document.querySelector("#gameid").value) {
-          juegoser.editGame(game);
+        console.log("game: ", game);
+
+        const isValid = isGameDataValid(game);
+
+        if (isValid) {
+          if (document.querySelector("#gameid").value) {
+            juegoser.editGame(game);
+          } else {
+            juegoser.crearGame(game);
+          }
+          clearFields(game);
         } else {
-          juegoser.crearGame(game);
+          console.log("INVALID DATA");
+          highlightMissingFields(game);
         }
       } else if (e.target.classList.contains("btnDeleteGame")) {
         juegoser.deletegame(e.target.parentElement.id);
@@ -114,6 +152,118 @@ async function buildModal() {
         document.querySelector("#form-create").reset();
       }
     });
+  }
+
+  function isGameDataValid(game) {
+    let isValid = false;
+    const {
+      name,
+      description,
+      shortdescription,
+      img,
+      imgdest,
+      category,
+      isDestacado,
+    } = game;
+
+    if (
+      name &&
+      description &&
+      shortdescription &&
+      img &&
+      imgdest &&
+      category &&
+      isDestacado
+    ) {
+      isValid = true;
+    }
+    return isValid;
+  }
+
+  function highlightMissingFields(game) {
+    const className = "is-invalid";
+
+    const name = document.querySelector("#gameNombre");
+    const description = document.querySelector("#gameDescription");
+    const shortdescription = document.querySelector("#gameDescriptionShort");
+    const img = document.querySelector("#gameimg");
+    const imgdest = document.querySelector("#gameimgdest");
+    const category = document.getElementById("myselect");
+    const isDestacado = document.querySelector("#gamedescatado");
+
+    if (!game.name) {
+      name.classList.add(className);
+    }
+    if (!game.description) {
+      description.classList.add(className);
+    }
+    if (!game.shortdescription) {
+      shortdescription.classList.add(className);
+    }
+    if (!game.img) {
+      img.classList.add(className);
+    }
+    if (!game.imgdest) {
+      imgdest.classList.add(className);
+    }
+    if (!game.category) {
+      category.classList.add(className);
+    }
+    if (!game.isDestacado) {
+      isDestacado.classList.add(className);
+    }
+
+    const errorAlert = document.querySelector("#error-alert");
+    errorAlert.style.visibility = "visible";
+  }
+
+  function isGameDataValid(game) {
+    let isValid = false;
+    const {
+      name,
+      description,
+      shortdescription,
+      img,
+      imgdest,
+      category,
+      isDestacado,
+    } = game;
+
+    if (
+      name &&
+      description &&
+      shortdescription &&
+      img &&
+      imgdest &&
+      category &&
+      isDestacado
+    ) {
+      isValid = true;
+    }
+    return isValid;
+  }
+
+  function clearFields(game) {
+    const className = "is-invalid";
+
+    const name = document.querySelector("#gameNombre");
+    const description = document.querySelector("#gameDescription");
+    const shortdescription = document.querySelector("#gameDescriptionShort");
+    const img = document.querySelector("#gameimg");
+    const imgdest = document.querySelector("#gameimgdest");
+    const category = document.getElementById("myselect");
+    const isDestacado = document.querySelector("#gamedescatado");
+
+    name.classList.remove(className);
+    description.classList.remove(className);
+    shortdescription.classList.remove(className);
+    img.classList.remove(className);
+    imgdest.classList.remove(className);
+    category.classList.remove(className);
+    isDestacado.classList.remove(className);
+
+    const errorAlert = document.querySelector("#error-alert");
+    errorAlert.style.visibility = "hidden";
   }
 
   async function setgameedit(gameedit) {
