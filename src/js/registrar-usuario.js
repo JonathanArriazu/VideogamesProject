@@ -30,30 +30,11 @@ const createUser = async () => {
         admin: false,
       }),
     });
-    form_register.reset();
+    myForm.reset();
   } catch (error) {
     console.log(error);
   }
 };
-
-/* myForm.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const formData = new FormData(this); // --> this se refiere al form. FormData se refiere a una coleccion de key values que contiene a los valores de username, password, email, etc.
-
-  fetch("http://localhost:4000/usuario", {
-    method: "POST",
-    headers: {
-      "Content-type": "application/json",
-    },
-    body: JSON.stringify({
-      formData,
-    }),
-  }).catch(function (error) {
-    console.error(error);
-  });
-});
- */
 
 import creationOfFooter from "../ui/footer.js";
 creationOfFooter();
