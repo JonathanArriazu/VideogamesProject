@@ -1,12 +1,22 @@
 {
-  "user": [
+  "usuario": [
     {
-      "name": "Jonathan",
-      "lastname": "Arriazu",
-      "admin": true
+      "nombre": "Paco Merla",
+      "usuario": "PacoMerla",
+      "correo": "joni.arriazu2@gmail.com",
+      "password": "qweqwe",
+      "admin": true,
+      "id": 1
+    },
+    {
+      "nombre": "Arriazu Jonathan",
+      "usuario": "JoniArriazu",
+      "correo": "joni.arriazu2@gmail.com",
+      "password": "qweqwe",
+      "admin": false,
+      "id": 2
     }
   ],
-  
   "games": [
     {
       "name": "FIFA 21",

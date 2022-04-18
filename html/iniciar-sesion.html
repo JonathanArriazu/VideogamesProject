@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/bootstrap/bootstrap.min.css" />
+  </head>
+  <body>
+    <section class="vh-100" style="background-color: #508bfc">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card shadow-2-strong" style="border-radius: 1rem">
+              <div class="card-body p-5 text-center">
+                <h3 class="mb-5">Sign in</h3>
+                <form class="form_login" id="formLogin">
+                  <div class="form-outline mb-4 grupo_usuarioLogin">
+                    <input
+                      type="text"
+                      autocomplete="username"
+                      placeholder="Usuario"
+                      id="usuarioLogin"
+                      class="form-control form-control-lg"
+                    />
+                  </div>
+
+                  <div class="form-outline mb-4 grupo_passwordLogin">
+                    <input
+                      type="password"
+                      autocomplete="new-password"
+                      placeholder="Contraseña"
+                      id="passwordLogin"
+                      class="form-control form-control-lg"
+                    />
+                  </div>
+
+                  <div class="d-flex justify-content-center">
+                    <button
+                      type="submit"
+                      class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
+                      id="btn_registrarse"
+                    >
+                      Register
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../src/bootstrap/bootstrap.bundle.js"></script>
+    <script src="../src/js/iniciar-sesion.js"></script>
+  </body>
+</html>
