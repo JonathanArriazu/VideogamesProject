@@ -33,7 +33,7 @@ function gameContainerHtml(game) {
           <span> <p class="mb-5 pb-4">${game.description} </p></span>
     <div class="d-flex justify-content-center mt-3 mb-5">
      <button type="button" class="btn btn-success fw-bold btn-play">
-       <a href="#">Jugar Ahora</a>
+       <a href="404.html">Jugar Ahora</a>
      </button>
     </div>
   </div>
@@ -78,7 +78,7 @@ function commentContainerHtml(comment) {
 function errorPage() {
   const div = document.createElement("div");
   div.innerHTML = `
-  <iframe src="../html/404.html" allowTransparency="true" scrolling="no" frameborder="0" >
+  <iframe src="404-single.html" allowTransparency="true" scrolling="no" frameborder="0" >
     </iframe>
   `;
   gameContainer.append(div);
